@@ -1,25 +1,5 @@
 module.exports = [
   {
-    title: 'Standard',
-    style: 'mapbox://styles/mapbox/standard'
-  },
-  {
-    title: 'Satellite Streets',
-    style: 'mapbox://styles/mapbox/satellite-streets-v12'
-  },
-  {
-    title: 'Outdoors',
-    style: 'mapbox://styles/mapbox/outdoors-v12'
-  },
-  {
-    title: 'Light',
-    style: 'mapbox://styles/mapbox/light-v11'
-  },
-  {
-    title: 'Dark',
-    style: 'mapbox://styles/mapbox/dark-v11'
-  },
-  {
     title: 'OSM',
     style: {
       name: 'osm',
@@ -39,6 +19,33 @@ module.exports = [
           id: 'osm-raster-layer',
           type: 'raster',
           source: 'osm-raster-tiles',
+          minzoom: 0,
+          maxzoom: 22
+        }
+      ]
+    }
+  },
+  {
+    title: 'Park Tiles',
+    style: {
+      name: 'osm',
+      version: 8,
+      sources: {
+        'npmap-raster-tiles': {
+          type: 'raster',
+          tiles: [
+            'https://atlas-stg.geoplatform.gov/styles/v1/atlas-user/ck58pyquo009v01p99xebegr9/tiles/512/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYXRsYXMtdXNlciIsImEiOiJjazFmdGx2bjQwMDAwMG5wZmYwbmJwbmE2In0.lWXK2UexpXuyVitesLdwUg'
+          ],
+          tileSize: 512,
+          attribution:
+            '&copy; <a href="https://www.nps.gov/maps/tools/park-tiles/">National Park Service</a>'
+        }
+      },
+      layers: [
+        {
+          id: 'npmap-raster-layer',
+          type: 'raster',
+          source: 'npmap-raster-tiles',
           minzoom: 0,
           maxzoom: 22
         }
