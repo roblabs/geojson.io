@@ -26,7 +26,7 @@ module.exports = [
     }
   },
   {
-    title: 'Park Tiles',
+    title: 'Park Tiles Standard',
     style: {
       name: 'osm',
       version: 8,
@@ -38,7 +38,88 @@ module.exports = [
           ],
           tileSize: 512,
           attribution:
-            '&copy; <a href="https://www.nps.gov/maps/tools/park-tiles/">National Park Service</a>'
+            '&copy; <a href="https://www.nps.gov/maps/web">National Park Service</a>'
+        }
+      },
+      layers: [
+        {
+          id: 'npmap-raster-layer',
+          type: 'raster',
+          source: 'npmap-raster-tiles',
+          minzoom: 0,
+          maxzoom: 22
+        }
+      ]
+    }
+  },
+  {
+    title: 'Imagery',
+    style: {
+      name: 'osm',
+      version: 8,
+      sources: {
+        'npmap-raster-tiles': {
+          type: 'raster',
+          tiles: [
+            'https://atlas-stg.geoplatform.gov/styles/v1/atlas-user/ck72fwp2642dv07o7tbqinvz4/tiles/512/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYXRsYXMtdXNlciIsImEiOiJjazFmdGx2bjQwMDAwMG5wZmYwbmJwbmE2In0.lWXK2UexpXuyVitesLdwUg'
+          ],
+          tileSize: 512,
+          attribution:
+            '&copy; <a href="https://www.nps.gov/maps/web">National Park Service</a>'
+        }
+      },
+      layers: [
+        {
+          id: 'npmap-raster-layer',
+          type: 'raster',
+          source: 'npmap-raster-tiles',
+          minzoom: 0,
+          maxzoom: 22
+        }
+      ]
+    }
+  },
+  {
+    title: 'Light',
+    style: {
+      name: 'osm',
+      version: 8,
+      sources: {
+        'npmap-raster-tiles': {
+          type: 'raster',
+          tiles: [
+            'https://atlas-stg.geoplatform.gov/styles/v1/atlas-user/ck5cpia2u0auf01p9vbugvcpv/tiles/512/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYXRsYXMtdXNlciIsImEiOiJjazFmdGx2bjQwMDAwMG5wZmYwbmJwbmE2In0.lWXK2UexpXuyVitesLdwUg'
+          ],
+          tileSize: 512,
+          attribution:
+            '&copy; <a href="https://www.nps.gov/maps/web">National Park Service</a>'
+        }
+      },
+      layers: [
+        {
+          id: 'npmap-raster-layer',
+          type: 'raster',
+          source: 'npmap-raster-tiles',
+          minzoom: 0,
+          maxzoom: 22
+        }
+      ]
+    }
+  },
+  {
+    title: 'Slate',
+    style: {
+      name: 'osm',
+      version: 8,
+      sources: {
+        'npmap-raster-tiles': {
+          type: 'raster',
+          tiles: [
+            'https://atlas-stg.geoplatform.gov/styles/v1/atlas-user/ckevxkdh1k0ru07r0k2eznkzp/tiles/512/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYXRsYXMtdXNlciIsImEiOiJjazFmdGx2bjQwMDAwMG5wZmYwbmJwbmE2In0.lWXK2UexpXuyVitesLdwUg'
+          ],
+          tileSize: 512,
+          attribution:
+            '&copy; <a href="https://www.nps.gov/maps/web">National Park Service</a>'
         }
       },
       layers: [
