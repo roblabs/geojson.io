@@ -109,7 +109,7 @@ module.exports = function (context, readonly) {
     context.map = new mapboxgl.Map({
       container: 'map',
       style,
-      center: [20, 0],
+      center: [-102, 40],
       zoom: 2,
       projection,
       hash: 'map'
