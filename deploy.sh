@@ -1,3 +1,4 @@
+#! /usr/bin/env sh
 branch=$(git symbolic-ref --short HEAD)
 
 git checkout --orphan deploy
@@ -9,7 +10,9 @@ npm run build
 rm -rf .gitignore
 echo "/node_modules\n.DS_Store" > .gitignore
 
-git add -A  # Add all files and commit them
+# For gh-pages, add only HTML + ./dist
+git add index.html
+git add --all ./dist
 git commit -m "deploy"
 
 git branch -D gh-pages  # Deletes the gh-pages branch
