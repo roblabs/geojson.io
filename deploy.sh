@@ -11,8 +11,8 @@ rm -rf .gitignore
 echo "/node_modules\n.DS_Store" > .gitignore
 
 # For gh-pages, add only HTML + ./dist
-git add index.html
-git add --all ./dist
+git add -f index.html
+git add -f ./dist
 git commit -m "deploy"
 
 git branch -D gh-pages  # Deletes the gh-pages branch
