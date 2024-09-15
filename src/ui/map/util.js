@@ -377,6 +377,7 @@ function bindPopup(e, context, writable) {
     if (
       'stroke' in properties &&
       'stroke-width' in properties &&
+      'stroke-dash' in properties &&
       'stroke-opacity' in properties
     ) {
       showAddStyleButton = false;
@@ -391,6 +392,7 @@ function bindPopup(e, context, writable) {
     if (
       'stroke' in properties &&
       'stroke-width' in properties &&
+      'stroke-dash' in properties &&
       'stroke-opacity' in properties &&
       'fill' in properties &&
       'fill-opacity' in properties
