@@ -44,6 +44,12 @@ module.exports = function (context) {
             d3.select(this).selectAll('input')[0][1].value
           );
         }
+
+        // TODO:  If any data needs to be an array, be sure to JSON.Parse
+        const valueStrokeDash = d3.select(this).selectAll('input')[0][0].value;
+        if (valueStrokeDash === 'stroke-dash') {
+          obj[valueStrokeDash] = JSON.parse(obj[valueStrokeDash]);
+        }
       }
 
       const data = context.data.get('map');
@@ -163,6 +169,17 @@ module.exports = function (context) {
             .attr('step', '0.1')
             .attr('value', '1');
         }
+      }
+      if (!('stroke-dash' in properties)) {
+        const tr = sel.select('table.marker-properties tbody').insert('tr');
+        tr.append('th')
+          .append('input')
+          .attr('type', 'text')
+          .attr('value', 'stroke-dash');
+        tr.append('td')
+          .append('input')
+          .attr('type', 'text')
+          .attr('value', '[1]');
       }
       if (geometry.type === 'Polygon' || geometry.type === 'MultiPolygon') {
         if (!('fill' in properties)) {

@@ -370,6 +370,7 @@ module.exports = function (context, readonly) {
           source: 'map-data',
           paint: {
             'line-color': ['coalesce', ['get', 'stroke'], color],
+            'line-dasharray': ['coalesce', ['get', 'stroke-dash'], [1]],
             'line-width': ['coalesce', ['get', 'stroke-width'], 2],
             'line-opacity': ['coalesce', ['get', 'stroke-opacity'], 1]
           },
@@ -382,6 +383,7 @@ module.exports = function (context, readonly) {
           source: 'map-data',
           paint: {
             'line-color': ['coalesce', ['get', 'stroke'], color],
+            'line-dasharray': ['coalesce', ['get', 'stroke-dash'], [1]],
             'line-width': ['coalesce', ['get', 'stroke-width'], 2],
             'line-opacity': ['coalesce', ['get', 'stroke-opacity'], 1]
           },
